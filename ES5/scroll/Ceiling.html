@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+ .last {
+   margin-bottom: 1000px;
+ }
+.first {
+  margin-top: 1000px;
+}
+  </style>
+  <title>scroll-吸顶大法</title>
+</head>
+
+<body>
+  <div class="first">我是参照物元素</div>
+  <div id="target">我是目标元素</div>
+  <div class="last">我是参照物元素</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    // 吸顶效果: 
+    $(document).scroll(function () { 
+    // 你希望被监听的元素 
+    var _target = $('#target');
+    // 元素-距离整个页面-顶端的位置(top值): 
+    var offsetTop = _target.offset().top;
+    /**
+     * 网页(文档被卷去的高度)距离整个页面-顶端的位置: 
+     * 相当于是获取已经随着你的滚轮而被遮住的页面的高度: 
+    **/
+    var scrollHiddenHeight = $(window).scrollTop();
+    // 元素的top值 -(减去) 被遮住的高度 = 当前元素距离当前可视窗口的顶端位置: 
+    var elementTopForWindow = offsetTop - scrollHiddenHeight;
+    console.log('这是获取元素在当前视口的相对偏移:',offsetTop);
+    console.log('这是网页被卷起来的高度:', scrollHiddenHeight);
+    console.log('最后算出,被匹配的元素距离可见窗口的顶端的距离为:',elementTopForWindow);
+    // 当-被匹配的元素-被卷到上面了,你看不到了,就执行弹窗提示 
+    if (elementTopForWindow <=0 ) { alert( '碰到顶端了') } })
+  </script>
+</body>
+
+</html>
