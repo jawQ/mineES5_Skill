@@ -1,40 +1,21 @@
 # Array
 
 ## 方法：
+#### 排序：
+1. 升序: arr.sort((a,b)=> {a-b})  会改变源数组
+
 #### 倒序：
-```javascript
-var _arr = [5,1,2,4,3,6,7,0];
-console.log(_arr.reverse())
-```
+1. reverse()
 
 #### 去重：
-```javascript
-var _arr = [5, 2, 1, 2, 4, 3, 5, 6, 7, 1, 0, 6, 7, 1, 0, 5, 6, 7,1,1];
-function removeDoubel(array) {
-  console.log('这是未去重的数组')
-  console.log(array)
-  
-  
-  var i,
-    k,
-    len = array.length
-  for (i = 0; i < len; i++) {
-    debugger
-    for (k = len-1; k > i; k--) {
-      var jawq_i = array[i];
-      var jawq_k = array[k];
-      if (jawq_i == jawq_k) {
-        array.splice(k,1);
-        len--;
-        // k++;
-      }
-    }
-  }
-  return array;
-}
-console.log('这是已经去重的数组')
-console.log(removeDoubel(_arr));
-```
+1. 结合splice
 
+#### 合并:
+1. concat
+
+
+#### 删除:
+1. splice
+2. slice
 
 ## 各种属性：
