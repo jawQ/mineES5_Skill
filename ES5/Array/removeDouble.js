@@ -40,7 +40,7 @@ module.exports = {
     // console.log(array)
     var i,
       k,
-      len = array.length
+      len = array.length;
     for (i = 0; i < len; i++) {
       for (k = len - 1; k > i; k--) {
         var jawq_i = array[i];
