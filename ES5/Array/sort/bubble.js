@@ -18,36 +18,33 @@ function timer() {
   // console.log(time.getTime())
   return time.getTime()
 }
-
-// 升序
+// 降序
 function bubble_desc(_arr) {
-  var begin = timer()
+  console.time('冒泡降序花费时间')
+  console.log('开始')
   var len = _arr.length,
-    i, j;
-  for (i = 0; i < len; i++) {
+    i, j, temp;
+  for (i = 0; i < len-1; i++) {
     for (j = i + 1; j < len; j++) {
       if (_arr[i] > _arr[j]) {
-        var temp;
         temp = _arr[i];
         _arr[i] = _arr[j];
         _arr[j] = temp;
       }
     }
   }
-  var over = timer()
-  // console.log('花费的时间')
-  // console.log(over - begin + '毫秒')
+  console.log('结束')
+  console.timeEnd('冒泡降序花费时间')
   return _arr;
 }
-// 降序
+// 升序
 function bubble_asc(_arr) {
   var begin = timer()
   var len = _arr.length,
-    i, j;
+    i, j, temp;
   for (i = 0; i < len; i++) {
     for (j = i + 1; j < len; j++) {
       if (_arr[i] < _arr[j]) {
-        var temp;
         temp = _arr[i];
         _arr[i] = _arr[j];
         _arr[j] = temp;
@@ -60,6 +57,6 @@ function bubble_asc(_arr) {
   return _arr;
 }
 
-// var result_arr = bubble_desc(arr);
-var acs_arr = bubble_asc(arr);
-console.log(acs_arr)
+var desc_arr = bubble_desc(arr);
+// var acs_arr = bubble_asc(arr);
+console.log(desc_arr)
