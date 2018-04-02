@@ -66,11 +66,29 @@ function _shift(_arr) {
   console.log(_arr)
  }
 
-_splice(arr);
+// _splice(arr);
 
 
 
 
 
 
- 
+ /**
+ * 方法1: delete arr[i]
+ * 定义： delete 操作符用于删除对象的某个属性；如果没有指向这个属性的引用，那它最终会被释放。
+ * 
+ * 优点：
+ * 缺点: 
+ *      1. 会改变源数组。
+ *      2. 即使删除了值，但是数组的length不变。
+ *  */
+function _delete(_arr) {
+  console.log('源数组');
+  console.log(_arr);
+  var delete_arr = delete _arr[1];
+  console.log('delete后');
+  console.log(delete_arr);
+  console.log('删除后数组');
+  console.log(_arr);
+}
+_delete(arr);
