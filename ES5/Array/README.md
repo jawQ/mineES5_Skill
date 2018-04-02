@@ -15,11 +15,28 @@
 
 
 #### 删除:
-1. pop()  ---  删除并返回数组的最后一个元素。
-2. shift()  ---  删除并返回数组的第一个元素。
-3. splice()  ---  splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。
+1. [pop()][pop]  ---  删除并返回数组的最后一个元素。
+2. [shift()][shift]   ---  删除并返回数组的第一个元素。
+3. [splice()][splice]  ---  splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。
 
 
 
 
 ## 各种属性：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  [pop]:  https://github.com/jawQ/mineES5_Skill/blob/master/ES5/Array/delete.js#L8
+  [shift]:  https://github.com/jawQ/mineES5_Skill/blob/master/ES5/Array/delete.js#L23
+  [splice]:  https://github.com/jawQ/mineES5_Skill/blob/master/ES5/Array/delete.js#L38
